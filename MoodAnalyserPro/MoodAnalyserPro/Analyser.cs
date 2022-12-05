@@ -18,7 +18,7 @@ namespace MoodAnalyserPro
         {
             if (string.IsNullOrEmpty(message))
             {
-                return "Happy";
+                throw new MoodAnalyserExpection(MoodAnalyserExpection.MoodAnalyserExpectionType.NULL_MOOD, "Mood is null");
             }
             if (message.Contains("Sad"))
             {

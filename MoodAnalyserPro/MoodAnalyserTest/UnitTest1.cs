@@ -26,11 +26,18 @@ namespace MoodAnalyserTest
         [Test]
         public void GivenNullMood_whenAnalyser_ReturnTheHappyMessage()
         {
-            Analyser analyser = new Analyser(null);
-            //act
-            string result = analyser.CheckMoodAnalyser();
+            try
+            {
+                Analyser analyser = new Analyser(null);
+                //act
+                string result = analyser.CheckMoodAnalyser();
+            } catch(MoodAnalyserExpection ex)
+            {
+                Assert.AreEqual(ex.Message, "Mood is null");
+            }
+            
 
-            Assert.AreEqual("Happy", result);
+           
         }
 
 
