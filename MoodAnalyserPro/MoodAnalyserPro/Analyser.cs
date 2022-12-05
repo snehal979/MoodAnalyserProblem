@@ -8,7 +8,13 @@ namespace MoodAnalyserPro
 {
     public class Analyser
     {
-        public string CheckMoodAnalyser(string message)
+        string message;
+        public Analyser(string message)
+        {
+            this.message=message;
+        }
+
+        public string CheckMoodAnalyser()
         {
             if (message.Contains("Sad"))
             {
