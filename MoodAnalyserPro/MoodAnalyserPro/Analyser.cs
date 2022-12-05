@@ -16,18 +16,26 @@ namespace MoodAnalyserPro
 
         public string CheckMoodAnalyser()
         {
-            if (string.IsNullOrEmpty(message))
+            try
+            {
+                if (this.message.Equals(string.Empty))
+                {
+                    throw new MoodAnalyserExpection(MoodAnalyserExpection.MoodAnalyserExpectionType.EMPTY_MOOD, "Mood is empty");
+                }
+                if (message.Contains("Sad"))
+                {
+                    return "Sad";
+                }
+                else
+                {
+                    return "Happy";
+                }
+            } catch (NullReferenceException)
             {
                 throw new MoodAnalyserExpection(MoodAnalyserExpection.MoodAnalyserExpectionType.NULL_MOOD, "Mood is null");
+                
             }
-            if (message.Contains("Sad"))
-            {
-                return "Sad";
-            }
-            else
-            {
-                return "Happy";
-            }
+           
         }
     }
 }
