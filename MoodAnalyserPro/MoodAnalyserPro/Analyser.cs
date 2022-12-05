@@ -16,6 +16,10 @@ namespace MoodAnalyserPro
 
         public string CheckMoodAnalyser()
         {
+            if (string.IsNullOrEmpty(message))
+            {
+                return "Happy";
+            }
             if (message.Contains("Sad"))
             {
                 return "Sad";
