@@ -24,5 +24,28 @@ namespace MoodAnalyserTest
 
 
         }
+        /// <summary>
+        /// given Mood analyser class name should return moodMessage UC 5.2
+        /// </summary>
+        [Test]
+        public void GivenMoodAnalyserClassName_ReturnExceptionMessage_UsingParamerter()
+        {
+
+            try
+            {
+
+                object obj = MoodAnalyserReflection.CreateMoodAnalyseUsingParameterConstructor("MoodAnalyserPro.Democlass", "Analyser", "Happy");  
+
+            }
+            catch (MoodAnalyserExpection ex)
+            {
+                Assert.AreEqual(ex.Message, "Class is not found");
+            }
+
+
+        }
+       
+
+
     }
 }

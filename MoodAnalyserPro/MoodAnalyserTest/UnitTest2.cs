@@ -9,20 +9,20 @@ namespace MoodAnalyserTest
 {
     public class UnitTest2
     {
-
+        
         /// <summary>
         /// Reflection of two object uc4.1
         /// </summary>
         [Test]
         public void GivenMoodAnalyserClassName_ReturnObject()
         {
-
-            object expected = new Analyser(null);
+            
+            object expected = new Analyser(null); 
             object obj = MoodAnalyserReflection.CreateMoodAnalyser("MoodAnalyserPro.Analyser", "Analyser");
 
             expected.Equals(obj);
             //Assert.AreEqual(expected,obj);
-
+           
 
 
         }
