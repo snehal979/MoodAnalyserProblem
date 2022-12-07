@@ -44,7 +44,27 @@ namespace MoodAnalyserTest
 
 
         }
-       
+        /// <summary>
+        /// given Mood analyser Constructor name should return moodMessage UC 5.3
+        /// </summary>
+        [Test]
+        public void GivenMoodAnalyserConstructorName_ReturnExceptionMessage_UsingParamerter()
+        {
+
+            try
+            {
+
+                object obj = MoodAnalyserReflection.CreateMoodAnalyseUsingParameterConstructor("MoodAnalyserPro.Analyser", "DemoClass", "Happy");
+
+            }
+            catch (MoodAnalyserExpection ex)
+            {
+                Assert.AreEqual(ex.Message, "Constructor is not found");
+            }
+
+
+        }
+
 
 
     }
