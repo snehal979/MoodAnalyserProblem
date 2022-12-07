@@ -11,7 +11,9 @@ namespace MoodAnalyserPro
         public enum MoodAnalyserExpectionType
         {
             NULL_MOOD,
-            EMPTY_MOOD
+            EMPTY_MOOD,
+            NO_SUCH_CLASS,
+            NO_SUCH_CONSTRUCTOR
         }
         public MoodAnalyserExpectionType type;
         public MoodAnalyserExpection(MoodAnalyserExpectionType type, string message) : base(message)
