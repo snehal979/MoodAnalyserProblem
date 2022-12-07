@@ -18,7 +18,7 @@ namespace MoodAnalyserTest
             try
             {
                 object expected = new Analyser(null);
-                object obj = MoodAnalyserReflection.CreateMoodAnalyser("Analyser", "Analyser"); // enter wrong constructor name only 
+                object obj = MoodAnalyserReflection.CreateMoodAnalyser("Analyser", "Analyser"); // enter wrong class name only 
 
             } catch(MoodAnalyserExpection ex)
             {
@@ -26,7 +26,25 @@ namespace MoodAnalyserTest
             }
 
         }
-       
+        /// <summary>
+        /// Reflection of two object Uc4.2
+        /// </summary>
+        [Test]
+        public void GivenMoodAnalyserClassName_Return_ConstructorMesaage()
+        {
+            try
+            {
+                object expected = new Analyser(null);
+                object obj = MoodAnalyserReflection.CreateMoodAnalyser("MoodAnalyserReflection.Analyser", "Analyser"); // enter wrong class name only 
+
+            }
+            catch (MoodAnalyserExpection ex)
+            {
+                Assert.AreEqual(ex.Message, "Constructor is not found");
+            }
+
+        }
+
 
     }
 }
