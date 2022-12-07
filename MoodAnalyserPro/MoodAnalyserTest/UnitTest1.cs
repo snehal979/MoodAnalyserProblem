@@ -5,7 +5,7 @@ namespace MoodAnalyserTest
     public class Tests
     {
         /// <summary>
-        /// exception given sad message and return sad
+        /// exception given sad message and return sad Uc2.1
         /// </summary>
         [Test]
         public void GivenSadMood_whenAnalyser_ReturnTheSadMessage()
@@ -17,7 +17,7 @@ namespace MoodAnalyserTest
             Assert.AreEqual("Sad", result);
         }
         /// <summary>
-        /// exception given any message and return happy
+        /// exception given any message and return happy Uc2.2
         /// </summary>
         [Test]
         public void GivenAnyMood_whenAnalyser_ReturnTheHappyMessage()
@@ -29,7 +29,7 @@ namespace MoodAnalyserTest
             Assert.AreEqual("Happy", result);
         }
         /// <summary>
-        /// Exception given null message and return null message
+        /// Exception given null message and return null message Uc3.1
         /// </summary>
         [Test]
         public void GivenNullMood_whenAnalyser_ReturnTheHappyMessage()
@@ -46,7 +46,7 @@ namespace MoodAnalyserTest
            
         }
         /// <summary>
-        /// Exception given empty message and return Empty message
+        /// Exception given empty message and return Empty message uc3.2
         /// </summary>
         [Test]
         public void GivenEmptyMood_whenAnalyser_ReturnTheHappyMessage()
@@ -67,7 +67,7 @@ namespace MoodAnalyserTest
         }
 
         /// <summary>
-        /// Reflection of two object
+        /// Reflection of two object uc4.1
         /// </summary>
         [Test]
         public void GivenMoodAnalyserClassName_ReturnObject()
