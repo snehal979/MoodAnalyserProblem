@@ -66,24 +66,6 @@ namespace MoodAnalyserTest
 
         }
 
-        /// <summary>
-        /// Reflection of two object uc4.1
-        /// </summary>
-        [Test]
-        public void GivenMoodAnalyserClassName_ReturnObject()
-        {
-            string message = null;
-            object expected = new Analyser(message);
-            object obj = MoodAnalyserReflection.CreateMoodAnalyser("MoodAnalyserPro.Analyser", "Analyser");
-
-            expected.Equals(obj);
-            //Assert.AreEqual(expected,obj);
-           
-
-
-        }
-
-
 
     }
 }

@@ -9,6 +9,23 @@ namespace MoodAnalyserTest
 {
     public class UnitTest2
     {
+
+        /// <summary>
+        /// Reflection of two object uc4.1
+        /// </summary>
+        [Test]
+        public void GivenMoodAnalyserClassName_ReturnObject()
+        {
+
+            object expected = new Analyser(null);
+            object obj = MoodAnalyserReflection.CreateMoodAnalyser("MoodAnalyserPro.Analyser", "Analyser");
+
+            expected.Equals(obj);
+            //Assert.AreEqual(expected,obj);
+
+
+
+        }
         /// <summary>
         /// Reflection of two object Uc4.2
         /// </summary>
@@ -17,17 +34,18 @@ namespace MoodAnalyserTest
         {
             try
             {
-                object expected = new Analyser(null);
+
                 object obj = MoodAnalyserReflection.CreateMoodAnalyser("Analyser", "Analyser"); // enter wrong class name only 
 
-            } catch(MoodAnalyserExpection ex)
+            }
+            catch (MoodAnalyserExpection ex)
             {
                 Assert.AreEqual(ex.Message, "Class is not found");
             }
 
         }
         /// <summary>
-        /// Reflection of two object Uc4.2
+        /// Reflection of two object Uc4.3
         /// </summary>
         [Test]
         public void GivenMoodAnalyserClassName_Return_ConstructorMesaage()
@@ -35,7 +53,7 @@ namespace MoodAnalyserTest
             try
             {
                 object expected = new Analyser(null);
-                object obj = MoodAnalyserReflection.CreateMoodAnalyser("MoodAnalyserReflection.Analyser", "Analyser"); // enter wrong class name only 
+                object obj = MoodAnalyserReflection.CreateMoodAnalyser("Analyser", "Demo"); // enter wrong constructor name only 
 
             }
             catch (MoodAnalyserExpection ex)
@@ -44,6 +62,7 @@ namespace MoodAnalyserTest
             }
 
         }
+
 
 
     }

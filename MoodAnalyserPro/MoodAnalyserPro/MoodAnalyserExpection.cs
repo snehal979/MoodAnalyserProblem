@@ -13,7 +13,7 @@ namespace MoodAnalyserPro
             NULL_MOOD,
             EMPTY_MOOD,
             NO_SUCH_CLASS,
-            NO_SUCH_CONSTRUCTOR
+            NO_SUCH_METHOD,
         }
         public MoodAnalyserExpectionType type;
         public MoodAnalyserExpection(MoodAnalyserExpectionType type, string message) : base(message)
